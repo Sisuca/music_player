@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Neumorphism</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="player">
+            <div class="player__controls">
+                <div class="player__btn player__btn--small" id="previous">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <h5 class="player__title">playing now</h5>
+                <div class="player__btn player__btn--small" id="icon-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="player__album">
+                <img src="https://f4.bcbits.com/img/a2348149955_16.jpg" alt="Album Cover" class="player__img"
+                    loading="lazy" />
+            </div>
+
+            <h2 class="player__artist">Marked Men</h2>
+            <h3 class="player__song">Doctor Dan</h3>
+
+            <input type="range" value="0" min="0" class="player__level" id="range" />
+            <div class="audio-duration">
+                <div class="start">00:00</div>
+                <div class="end">01:44</div>
+            </div>
+
+            <audio class="player__audio" controls id="audio">
+                <source src="./assets/doctor_dan.mp3"
+                    type="audio/mpeg" />
+            </audio>
+
+            <div class="player__controls">
+                <div class="player__btn player__btn--medium" id="backward">
+                    <i class="fas fa-backward"></i>
+                </div>
+
+                <div class="player__btn player__btn--medium blue play" id="play">
+                    <i class="fas fa-play play-btn"></i>
+                    <i class="fas fa-pause pause-btn hide"></i>
+                </div>
+
+                <div class="player__btn player__btn--medium" id="forward">
+                    <i class="fas fa-forward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
